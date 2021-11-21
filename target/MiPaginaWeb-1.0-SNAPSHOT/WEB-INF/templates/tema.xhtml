@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="#{request.contextPath}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"></link>
+        <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet"></link>
+    <!-- Custom styles for this template-->
+    <link href="#{request.contextPath}/css/sb-admin-2.min.css" rel="stylesheet"></link>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <f:event listener="#{usuController.validarSession()}" type="preRenderView"/>
+    </h:head>
+    <body id="page-top">
+         <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion">
+        	<ui:insert name="menuvertical">MenuVertical</ui:insert>
+        </div>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+			<div id="content">
+				<ui:insert name="content">Content</ui:insert>			
+			</div>     
+			<footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright ; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>   
+        </div>
+         <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+   <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+   
+    <!-- Bootstrap core JavaScript-->
+    <script src="#{request.contextPath}/vendor/jquery/jquery.min.js"></script>
+    <script src="#{request.contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="#{request.contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="#{request.contextPath}/js/sb-admin-2.min.js"></script>
+    <script src="#{request.contextPath}/js/spanishLocale.js"></script>
+<!--     <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+<!-- 	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script> -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+</body>
+</html>

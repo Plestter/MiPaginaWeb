@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-3 pb-3">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <span class="subheading">Featured Products</span>
+                    <h2 class="mb-4">Nuestros productos</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                </div>
+            </div>   		
+        </div>
+        <div class="container">
+            <div class="row">
+                <ui:repeat value="#{productoController.productos}" var="productos">
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="product">
+                            <a href="#" class="img-prod"><img class="img-fluid" src="#{request.contextPath}/img/principal/#{productos.pdtImagen}" alt="Colorlib Template"/>
+                                <span class="status">#{productos.pdtNombre}</span>
+                                <div class="overlay"></div>
+                            </a>
+                            <div class="text py-3 pb-4 px-3 text-center">
+                                <h3><a href="#">#{productos.pdtNombre}</a></h3>
+                                <div class="d-flex">
+                                    <div class="pricing">
+                                        <p class="price"><span class="mr-2 price-dc"></span><span class="price-sale">
+
+                                                <h:outputText value="#{productos.pdtValorventa}">
+                                                    <f:convertNumber type="currency" currencySymbol="$" />
+                                                </h:outputText>
+                                            </span></p>
+                                    </div>
+                                </div>
+                                <div class="bottom-area d-flex px-3">
+                                    <div class="m-auto d-flex">
+                                        <h:form>
+
+                                            <h:commandLink  class="add-to-cart d-flex justify-content-center align-items-center text-center" action="#{detalleProductoController.navigate('/faces/template/productoDetalle/productoDetalle.xhtml', productos.pdtProductoid, productos)}" title="add">
+                                                <span><i class="ion-ios-menu"></i></span>
+                                            </h:commandLink>
+                                        </h:form>
+
+                                        <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                            <span><i class="ion-ios-cart"></i></span>
+                                        </a>
+                                        <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                                            <span><i class="ion-ios-heart"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </ui:repeat>
+            </div>
+        </div>
+    </section>
+</html>

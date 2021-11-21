@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <section class="ftco-section ftco-cart">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ftco-animate">
+                    <div class="cart-list">
+                        <table class="table">
+                            <thead class="thead-primary">
+                                <tr class="text-center">
+                                    <th><![CDATA[ &nbsp; ]]></th>
+                                    <th><![CDATA[ &nbsp; ]]></th>
+                                    <th>Product name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ui:repeat value="#{detalleProductoController.productoCar}" var="productos">
+                                    <tr class="text-center">
+
+                                        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+
+                                        <td class="image-prod"><div class="img" style="background-image:url(#{request.contextPath}/img/principal/#{productos.pdtImagen});"></div></td>
+
+                                        <td class="product-name">
+                                            <h3>#{productos.pdtNombre}</h3>
+                                            <p>#{productos.pdtDescripcion}</p>
+                                        </td>
+
+                                        <td class="">
+                                            <h:outputText value="#{productos.pdtValorventa}">
+                                                <f:convertNumber type="currency" currencySymbol="$" />
+                                            </h:outputText>
+                                        </td>
+
+                                        <td class="quantity">
+                                            <div class="input-group mb-3">
+                                                <input type="text" name="quantity" class="quantity form-control input-number" disabled="true" value="#{productos.cantidad}" min="1" max="100"/>
+                                            </div>
+                                        </td>
+
+                                        <td class="total">
+                                            <h:outputText value="#{productos.pdtValorventa*productos.cantidad}">
+                                                <f:convertNumber type="currency" currencySymbol="$" />
+                                            </h:outputText>
+                                        </td>
+                                    </tr><!-- END TR-->
+                                </ui:repeat>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
+                    <div class="cart-total mb-3">
+                        <h3>Coupon Code</h3>
+                        <p>Enter your coupon code if you have one</p>
+                        <form action="#" class="info">
+                            <div class="form-group">
+                                <label for="">Coupon code</label>
+                                <input type="text" class="form-control text-left px-3" placeholder=""/>
+                            </div>
+                        </form>
+                    </div>
+                    <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Apply Coupon</a></p>
+                </div>
+                <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
+                    <div class="cart-total mb-3">
+                        <h3>Estimate shipping and tax</h3>
+                        <p>Enter your destination to get a shipping estimate</p>
+                        <form action="#" class="info">
+                            <div class="form-group">
+                                <label for="">Country</label>
+                                <input type="text" class="form-control text-left px-3" placeholder=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">State/Province</label>
+                                <input type="text" class="form-control text-left px-3" placeholder=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Zip/Postal Code</label>
+                                <input type="text" class="form-control text-left px-3" placeholder=""/>
+                            </div>
+                        </form>
+                    </div>
+                    <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Estimate</a></p>
+                </div>
+                <div class="col-lg-4 mt-5 cart-wrap ftco-animate">
+                    <div class="cart-total mb-3">
+                        <h3>Cart Totals</h3>
+                        <p class="d-flex">
+                            <span>Subtotal</span>
+                            <span>
+                                <h:outputText value="#{detalleProductoController.subtotal}">
+                                    <f:convertNumber type="currency" currencySymbol="$" />
+                                </h:outputText>
+                            </span>
+                        </p>
+                        <p class="d-flex">
+                            <span>Delivery</span>
+                            <span>$0.00</span>
+                        </p>
+                        <p class="d-flex">
+                            <span>Discount</span>
+                            <span>$0.00</span>
+                        </p>
+                        <hr/>
+
+                        <p class="d-flex total-price">
+                            <span>Total</span>
+                            <span>   
+                                <h:outputText value="#{detalleProductoController.subtotal}">
+                                    <f:convertNumber type="currency" currencySymbol="$" />
+                                </h:outputText>
+                            </span>
+                        </p>
+                    </div>
+                    <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</html>

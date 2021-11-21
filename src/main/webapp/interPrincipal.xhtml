@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <title>Todo Agro</title>
+        <link rel="stylesheet"  href="css/cssCarousel.css"></link>
+        <link rel="stylesheet"  href="css/cssPrincipal.css"></link>
+        <script src="js/carousel.js"></script>
+        <script type="text/javascript" src="js/Index.js"></script><!-- comment -->
+    </h:head>
+    <h:body style="background-image: url(img/0001.jpg); 
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            ">
+        <!--Seccion 1-->
+
+        <section class="inicio">
+            <div class="logo"  > 
+                <img class="logo1" src="img/principal/Todoagro.png" ></img>
+            </div>
+
+            <div class="buscar">
+                <input class="busqueda" type="text" name="nombres" placeholder="Que estas buscando?" style="margin: 10px 0px;width: 70%;height: 20px;background: #fff;padding: 8px;border-radius: 8px;margin-bottom: 5px;border: 2px solid #FFA016;font-size: 15px;color: #0D3C09;float: flex; margin-right: 5px;" ></input>
+                <img class="lupa" src="img/principal/lupa.png"></img>
+            </div>
+
+           <a class="sidebar-brand d-flex align-items-center justify-content-center" href="javascript:history.back(-1);">
+                <div class="sidebar-brand-icon rotate-n-15">
+<!--                     <i class="fas fa-laugh-wink"></i> -->
+					<img id="usuFotoPro1" src="#{request.contextPath}/ImgProServlet/#{usuController.usuLog.usuFoto}" alt="" style="width: 50px; height: 50px;"></img>
+                </div>
+                <div class="sidebar-brand-text mx-3"><h:outputText value="#{usuController.usuLog.usuNombres} (#{usuController.rolSession})" /></div>
+            </a>
+            </section>
+
+            <div class="intro">
+                <p> <i> Facilitamos y simplificamos las labores del campo para mejorar la calidad de vida de quienes lo trabajan.</i></p>
+            </div>
+
+            <!--Seccion 2-->
+            <header>
+                <nav class="navegacion">
+                    <ul class="menu">
+
+                        <li>
+                            <h:link outcome="pagProductos.xhtml"><b>Todos los Productos</b></h:link>
+                            <ul class="submenu">
+                                <a>Oferta de la semana</a>
+                            </ul></li>
+                        <li><h:link><b>Noticias</b></h:link>
+                            <ul class="submenu">
+
+                            </ul>
+                        </li>
+                        <li><a href="#"><b>Paginas</b></a>
+                            <ul class="submenu">
+                            <h:link outcome="pagina404.xhtml">ERROR404</h:link>
+                            <h:link outcome="pagina500.xhtml">ERROR500</h:link>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <!--Seccion 3-->
+            <div class="container" style="display: block;margin: auto">
+                <div class="row" style="width: 100%;">
+                    <div class="col s12">
+                        <div class="carousel center-aling" style="min-height: 600px;">
+
+                            <div class="carousel-item" style="display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;width: 500px; height: 400px;">
+                                <img src="img/principal/carousel-1.png" alt="" style="width: 100%; height: 100%;object-fit: fill;position: absolute;top:0;left: 0;z-index: -1; border-radius: 15px;"></img>
+                            </div>
+
+                            <div class="carousel-item" style="display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;width: 500px; height: 400px;">
+                                <h2 class="Subtitulo"> Semillas</h2>
+                                <img src="img/principal/carousel-2.jpg" alt="" style="width: 100%; height: 100%;object-fit: fill;position: absolute;top:0;left: 0;z-index: -1; border-radius: 15px;"></img>
+                            </div>
+
+                            <div class="carousel-item" style="display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;width: 500px; height: 400px;">
+                                <h2 class="Subtitulo"> Fertilizantes </h2>
+
+                                <img src="img/principal/carousel-3.jpg" alt="" style="width: 100%; height: 100%;object-fit: fill;position: absolute;top:0;left: 0;z-index: -1; border-radius: 15px;"></img>
+                            </div>
+
+                            <div class="carousel-item" style="display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;width: 500px; height: 400px;">
+                                <h2 class="Subtitulo"> Agricultura </h2>
+                                <img src="img/principal/carousel-4.jpeg" alt="" style="width: 100%; height: 100%;object-fit: fill;position: absolute;top:0;left: 0;z-index: -1; border-radius: 15px;"></img>
+                            </div>
+
+                            <div class="carousel-item" style="display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;width: 500px; height: 400px;">
+                                <h2 class="Subtitulo">Aditivos</h2>
+                                <img src="img/principal/carousel-5.jpg" alt="" style="width: 100%; height: 100%;object-fit: fill;position: absolute;top:0;left: 0;z-index: -1; border-radius: 15px;"></img>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="presentacion">
+                <div id="centro2">
+                    <div id="izquierda">
+                        <h2><strong> Bienvenidos.</strong></h2>
+                        <p class="Descripcion-pres">Proyecto System Agro Web, diseño de nuestra primera pagina web,desarrollada en HTML CSS y JavaScript.</p>
+                        <div id="vaca">
+                            <img src="img/principal/vaca.gif" class="vaca"></img>
+                        </div>
+                        <button href="500.html" class="boton">Acerca de nosotros.</button>
+                    </div>
+                    <div id="derecha"> 
+                        <video width="90%" height="500">
+                            <source src="img/principal/Videotodoagro.mp4" autoplay="Videotodoagro.mp4"></source>
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div id="espacio">
+                <h1 style="font-size: 40px; padding:0"><i> Mantente Informado Con Nuestra Seccion De Noticias</i> </h1>
+            </div>
+
+            <!--Seccion 4-->
+
+            <div id="contenidos">
+                <div id="centro3">
+                    <div id="izquierda">
+                        <h3>El momento del Agro</h3>
+                        <p class="descripcion">
+                            Es indiscutible que el sector agrario esté pasando por un momento muy especial, las cifras lo demuestran y el compromiso del Gobierno lo ratifica
+                            El crecimiento del sector agrícola va a estar soportado en una gran demanda proveniente principalmente del mercado externo. Los datos que revela el Fondo Internacional para Desarrollo Agrícola FIDA muestran cómo la producción de alimentos en países en desarrollo deberá duplicarse para el 2050 debido al crecimiento del ingreso disponible de las economías emergentes, la mejora en la calidad de la dieta y el incremento en la población mundial, que alcanzará las 9.000 millones de personas.
+                        </p>
+                        <div id="img"> 
+                            <img src="img/principal/Agro1.jpg" class="img-servicios"></img>
+                            <img src="img/principal/Agro2.jpg" class="img-servicios"></img>
+                            <img src="img/principal/Agro3.jpg" class="img-servicios"></img>
+                        </div>
+                    </div>
+                    <div id="derecha">
+                        <h3>Ultimas novedades</h3>
+                        <article>
+                            <h4> <b> La covid no contagió la dinámica de la caficultura</b> </h4>
+                            <p>
+                                La producción del grano generó ingresos y empleo, según reconocen en el congreso anual de la Federación de Cafeteros, Gobierno y empresarios....
+                            </p>
+                            <a href="https://www.elcolombiano.com/negocios/agro" class="leer-mas">Leer mas</a>
+                        </article>
+                        <article>
+                            <h4><b> Reactivación será la palabra clave de 2021: Carrasquilla</b></h4>
+                            <p>
+                                La reactivación económica del país estará apalancada en el plan !Nuevo Compromiso por Colombia¡ que contempla inversiones en el corto,...
+                            </p>
+                            <a href="https://www.elcolombiano.com/negocios/agro" class="leer-mas">Leer mas</a>
+                        </article>
+                        <article>
+                            <h4><b>Pandemia sacó a flote las deudas del país con el agro</b></h4>
+                            <p>
+                                Productores piden solventar crisis de precios; expertos no le apostarán a una reforma agraria....
+                            </p>
+                            <a href="https://www.elcolombiano.com/negocios/agro" class="leer-mas">Leer mas</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!--Seccion 5-->
+
+            <section class="seccion_ofertas">
+                <p class="intro"> <i>Los  mejores productos de la mejor calidad del campo colombiano.</i></p>
+
+                <div class="container">
+					<c:forEach var="item" items="#{vencimientoController.getImagenesProductos()}">
+			            <div class="colum colum__50-25">
+                       		<img src="#{request.contextPath}/ImgServlet/#{item.pdtImagen}" alt="" class="ofertas_img"></img>
+                       		<div class="ofertas_titulo"><h:outputText value="#{item.pdtNombre}"/></div>
+                      	 	<div class="ofertas_precio"><h:outputText value="#{item.pdtValorventa}"/></div>
+                   		</div>
+		            </c:forEach>
+                </div>
+                <div class="row"></div>
+                <div id="ofer">
+	                <h2 class="titulo"> <I>Ofertas de esta semana</I></h2>
+	                <div class="col"></div>
+	                <div class="columna">
+	                    <img src="img/principal/semillas.jpg" alt="" class="ofer_img "></img>
+	                    <div class="ofer_texto">Semillas</div>
+	                    <div class="ofer_precio"><i>ahora $10.00 </i></div>
+	                </div>
+	            </div>
+            </section>
+            
+            <!--Seccion 6-->
+
+            <section>
+                <div class="fidelizacion">
+                    <div class="cuadro">
+                        <img src="img/principal/envios.jpg" alt="" class="envios_img"></img>
+                        <div class="envios_titulo"> <p> Protejemos tus envios.</p>
+                            <div class="ofertas_precio"><a href="envios.html" class="boton1">Acerca de</a> </div>
+                        </div>
+                    </div>
+
+                    <div class="cuadro2">
+                        <p class="servicio"> Deseas calificar nuestro servicio?</p>
+<!--                         <div class="precio"><a class="boton" href="pqrs/formPQRS.xhtml ">Calificar servicio</a></div> -->
+                       <div class="precio"><h:link outcome="pqrs/formPQRS.xhtml" class="boton"><b>Calificar servicio</b></h:link></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Seccion 7-->
+
+            <footer class="main_footer">
+                <div class="footer">
+                    <div class="footer_t1">
+                        <h2 class="column_tittle">¿Porque preferirnos?</h2>
+                        <p class="column_texto">Nos caracteriza el buen servicio, buscando en todo proyecto la satisfacción completa de nuestros clientes al utilizar nuestros productos y servicios.
+                            Nos preocupamos por utilizar los más altos estándares en gestión de proyectos y calidad en todos nuestros productos.</p>
+                    </div>
+                </div>
+
+                <div class="footer_t2">
+                    <h2 class="column_tittle">Contactanos</h2>
+                    <p class="column_texto">Todoagro@gmail.com.co</p>
+                    <p class="column_texto">Calle 85 # 76b-12 Norte</p>
+                    <p class="column_texto">Tel:01 8000 4681</p>
+                </div> 
+
+                <div class="footer_t3">
+                    <h2 class="column_tittle">Siguenos en la redes</h2>
+                    <p class="column_texto"> <a href="" class="icon">Facebook</a></p>
+                    <p class="column_texto"> <a href="" class="icon">Siguenos en Twiter</a></p>
+                    <p class="column_texto"> <a href="" class="icon">Suscribete a nuestro canal</a></p>
+                </div>
+
+
+            </footer>
+
+            <br />
+        
+    </h:body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/Index.js"></script>
+
+</html>
+

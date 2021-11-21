@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link
+		href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css"></link>
+	<link rel="stylesheet" href="css/cssLogin.css"></link>
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</h:head>
+<h:body>
+	<div class="login-wrap">
+		<div class="espacio"></div>
+		<p:messages id="msg1" showDetail="true" closable="true" />
+		<div class="login-html">
+			<input id="tab-1" type="radio" name="tab" class="sign-in"></input><label
+				for="tab-1" class="tab">Acceder</label> <input id="tab-2"
+				type="radio" name="tab" class="for-pwd"></input><label for="tab-2"
+				class="tab">Recuperar contraseña</label>
+			<div class="login-form">
+				<div class="sign-in-htm">
+					<h:form id="form1">						
+						<div class="row">
+							<div class="col-md-12">
+								<fieldset>
+									<h:outputLabel>Email</h:outputLabel>
+									<h:inputText value="#{usuController.correoIn}"
+										requiredMessage="Se requiere un correo valido !!"
+                                                                                required="true" class="form-control" />
+								</fieldset>
+							</div>
+						</div>
+						<br />
+
+						<div class="row">
+							<div class="col-md-12">
+								<fieldset>
+									<h:inputSecret value="#{usuController.claveIn}"
+										requiredMessage="Se requiere una clave valido !!"
+										required="true" class="form-control" />
+								</fieldset>
+							</div>
+						</div>
+						<br />
+
+						<div class="row">
+							<div class="col-md-7"></div>
+							<h:commandButton class="btn btn-success btn-send pt-2 btn-block"
+								value="Ingresar"
+								actionListener="#{usuController.validarUsuario()}"/>								
+						</div>
+					</h:form>
+					<div class="group">
+						<h:link outcome="pagRegistro.xhtml" value="Registro"
+                                                        class="btn btn-success btn-send pt-2 btn-block" style="margin-top: 15px; background: blue; border: 0px;" />
+					</div>
+					<div class="hr"></div>
+				</div>
+				<div class="for-pwd-htm">
+					<div class="group">
+						<h:form>
+							<div class="row">
+								<div class="col-md-12">
+									<fieldset>
+										<h:outputLabel>Usuario o Email</h:outputLabel>
+										<h:inputText value="#{usuController.correoIn}"
+											requiredMessage="Se requiere un correo valido !!"
+											required="true" class="form-control" />
+									</fieldset>
+								</div>
+							</div>
+							<br />
+							<div class="row">
+								<div class="col-md-7"></div>
+								<h:commandButton class="btn btn-success btn-send pt-2 btn-block"
+									value="Recuperar Contraseña"
+									actionListener="#{usuController.recuperarClave()}" />
+							</div>
+						</h:form>
+					</div>
+					<div class="hr"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</h:body>
+</html>

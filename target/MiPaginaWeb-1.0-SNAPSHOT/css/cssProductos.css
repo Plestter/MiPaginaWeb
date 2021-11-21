@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+* {
+  font-family: 'Open sans';
+
+}
+body {
+	  
+}
+
+.logo{
+	height:60px;
+	width:300px; 
+}
+.Registro{
+ 
+ margin-top: 15px;
+ text-decoration: none;
+ background: #008FFF;
+ color: #fff;
+ padding: 10px 15px;
+ border-radius: 5px;
+ font-size: 15px;
+ position: absolute;
+ right: 20px;
+ top: -5px;
+}
+.navegacion{
+	width: 1000px;
+	margin: 30px auto;
+	background: #FF7800;
+    font-size: 1.1em;  
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #FFA600;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+	width: 30.333%;
+	text-align: center;
+}
+
+.menu > li > link    {
+	display: block;
+	padding: 3px;
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.menu li a:hover{
+	color: #FFF981;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #FFAA5A;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: rgb(0, 0, 0);
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+/*-------titulo-----*/
+.titulo{
+    margin: 15px;
+   
+} 
+.titulo .intro{
+  border-radius: 5px;
+  height:30px ; 
+  width:100%;
+  text-align:center;
+  color: #DFBD81;
+  background:#6F4000;
+  font-size: 1.2em;  
+  margin-top: 20px;
+  margin: 10px;
+}
+/*-----contenido-------*/
+/*-----*/
+.contenido1 {
+background:#fff;
+height: auto;
+width: 95%;
+border-radius: 5px;
+margin:auto;
+
+}
+.contenido1 .titulo_contenido{
+	text-align: center;
+	font-size: 2.7em;
+}
+
+.contenido1 .colum {
+	background:#0000;
+	margin-bottom: 30px;	
+    text-align:center;
+    box-shadow: 0px 0px 8px #909090;
+}
+.contenido1 .ofertas_img{
+	display: block;
+	margin:auto;
+	height: 300px;
+	width: 90%;
+}
+.contenido1 .ofertas_titulo{
+	text-align:center;
+	font-size: 1.3em;
+	padding-top: 10px;
+	padding-botton:20px;
+	color: #FF8B00;
+}
+.contenido1 .ofertas_precio{
+	color: #FC3605;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.colum__50-25{
+    width: 23.333%;
+    display: inline-block;
+    padding: 5px; 
+    border: 1px solid #0000;
+    border-radius: 5px;
+}
+
+
+
+/*----espacio---*/
+.espacio{
+	border-radius: 2px;
+	margin:0.5em auto;
+	width: 1000px;
+	height: 3px;
+	background: #000;
+	}
+/*-----------ayuda al campesino---------*/
+.ventas{
+	
+	width: 100%;
+	height: auto;
+        padding-bottom: 10px;
+}
+.ventas .Titulo_ventas{
+	color: black;
+    text-align: center;
+    font-size: 2.5em;
+}
+.ventas .container{
+  display: flex;
+  background:#A67B35;
+  height: 620px;
+  width: 90%;
+  margin:auto;
+}
+.ventas .container .ventas_img{
+	margin:auto;
+	height: 100%;
+	width: 100%;
+	border: 5px solid;
+}
+.ventas .colum{
+	height: 329px;
+	width: 48%;
+	background:#000;
+	margin:10px;
+}
+.ventas .ventas_precio{
+	color: #FFD38B;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+.ventas .ventas_titulo	{
+    text-align:center;
+	font-size: 1em;
+	padding-top: 10px;
+	padding-botton:20px;
+}
+.ventas .boton{
+	margin-top: 0px;
+ text-decoration: none;
+ background: #6C4D1B;
+ color: #fff;
+ padding: 8px 10px;
+ border:0;
+ border-radius: 5px;
+ font-size: 15px;
+ right: 20px;
+ padding: 10px;
+}
+.contenido{
+height: auto;
+width: 90%;
+border-radius: 5px;
+margin:auto;
+}
+.contenido .container1 {
+  padding: 5%;
+  height: auto;
+  width: 100%;
+  margin:auto;
+
+
+}
+.contenido .titulo_contenido{
+	text-align: center;
+	font-size: 2.7em;
+}
+
+.contenido .colum {
+	background:#fff;
+	margin-bottom: 30px;	
+    text-align:center;
+    box-shadow: 0px 0px 8px #909090;
+    width: 30%;
+}
+.contenido .ofertas_img{
+	display: block;
+	margin:auto;
+	height: 300px;
+	width: auto;
+}
+.contenido .ofertas_titulo{
+	text-align:center;
+	font-size: 1.3em;
+	padding-top: 10px;
+	padding-botton:20px;
+	color: #FF8B00;
+}
+.contenido .ofertas_precio{
+	color: #FC3605;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.contenido .colum__50-25{
+	display: inline-block;
+    padding: 5px;
+    border: 1px solid #7CBF5B;
+    border-radius: 5px;
+    height:auto;
+    width: 30%;	
+}
+/*---------Footer----*/
+.main_footer {
+ height: auto;
+ width: 1300px;
+ border-radius: 5px;
+ margin:auto;
+ background:#222;
+ color: #969595;
+ padding: 10px;
+ display: flex;
+
+
+}
+.main_footer .footer_t1 {
+	width: 600px;
+	text-align: center;
+		
+}
+.main_footer .footer_t2{
+	width: 100px;
+	text-align: center;
+}
+.main_footer .footer_t2{
+	width: 350px;
+}
+.main_footer .footer_t3{
+display: flex;
+}
+.copy {
+	text-align: center;
+	margin: auto;
+	margin-top: 15px;
+}

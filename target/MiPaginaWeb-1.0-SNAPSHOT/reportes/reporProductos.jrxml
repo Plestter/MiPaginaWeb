@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="93230855-f295-4aa9-8dc1-a9734582bf30">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *  FROM todoagrobd.producto;]]>
+	</queryString>
+	<field name="pdt_productoid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pdt_nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pdt_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pdt_valorventa" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fk_categoria" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pdt_total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pdt_imagen" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="65" y="0" width="387" height="46" forecolor="#006600" uuid="9a9354e7-ff91-4f92-9d7b-c19b010e8680"/>
+				<textElement verticalAlignment="Middle">
+					<font size="40"/>
+				</textElement>
+				<text><![CDATA[SystemAgroWeb]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="100" y="46" width="185" height="22" uuid="2c70a094-3746-4372-8170-ded751387a56"/>
+				<text><![CDATA[Reporte de Productos]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-23" y="-18" width="64" height="52" uuid="5b2e9342-7822-4f83-a9a7-749caa83cd92"/>
+				<imageExpression><![CDATA["C:\\Users\\nombre\\Documents\\NetBeansProjects\\jhonBelmont86-todoagroejb-bcc704e66da1\\MiPaginaWeb\\src\\main\\webapp\\reportes\\WhatsApp Image 2021-09-23 at 10.33.35 AM.jpeg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="433" y="0" width="80" height="70" uuid="11584e0e-4ec5-4995-9adc-cb1b13a7b065"/>
+				<imageExpression><![CDATA["C:\\Users\\nombre\\Documents\\NetBeansProjects\\jhonBelmont86-todoagroejb-bcc704e66da1\\MiPaginaWeb\\src\\main\\webapp\\reportes\\logo-de-la-empresa-entrega-comestibles-o-plantilla-diseño-del-logotipo-los-productos-compra-las-hortalizas-y-el-icono-hogar-167341479.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="a28c754d-6659-4621-bbf6-8ed840691ca0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="bafab54a-d689-4cf9-a929-a507ea92fd5d"/>
+				<text><![CDATA[pdt_productoid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="67254816-db95-4509-8e8f-041de21d54f8"/>
+				<text><![CDATA[pdt_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="a0a5d0e1-851f-44ba-9deb-9a6f7f98d38c"/>
+				<text><![CDATA[pdt_descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="a51536eb-83b0-423e-9572-cc36ce673e10"/>
+				<text><![CDATA[pdt_valorventa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="fa27b69d-ee4f-4186-82d8-211bf5385fa7"/>
+				<text><![CDATA[fk_categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="8f4fae85-b3fd-47de-92ee-0f40ed1eeceb"/>
+				<text><![CDATA[pdt_total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="97c88d67-d6ef-4894-92e0-2116cff6a093"/>
+				<text><![CDATA[pdt_imagen]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="ee7f4876-6df1-47e9-bd29-ff627ae5f7c1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="c5f6ec44-205a-4d38-9cc7-0452fc2f9247"/>
+				<textFieldExpression><![CDATA[$F{pdt_productoid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="b3c6dabb-cb5f-46e8-9c1a-8056caafb59f"/>
+				<textFieldExpression><![CDATA[$F{pdt_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="2c92718a-ab0d-4dd4-b28d-82fdbff30322"/>
+				<textFieldExpression><![CDATA[$F{pdt_descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="aa136fab-2bf3-4856-9a86-855027ceb720"/>
+				<textFieldExpression><![CDATA[$F{pdt_valorventa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="7cbf7e53-3033-4dc5-82d0-3eae0a2d8a89"/>
+				<textFieldExpression><![CDATA[$F{fk_categoria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="185d946d-1a48-4588-b2e2-eb8a82176d11"/>
+				<textFieldExpression><![CDATA[$F{pdt_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="cb946a83-5b5c-4c45-ad01-7c2b894d5ca4"/>
+				<textFieldExpression><![CDATA[$F{pdt_imagen}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="c2fbc96a-653d-4ed8-aba0-279f89cb45df"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="a88faee0-6646-4b3c-a8c4-9fdee0cc5ad2"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="151a0ea6-042f-409e-87a9-aca243297c37"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="3627f200-5afc-49d1-baab-1417932544d1"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

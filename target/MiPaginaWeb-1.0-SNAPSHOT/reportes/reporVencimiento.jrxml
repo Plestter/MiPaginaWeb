@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="040f225b-88f8-48df-b5d9-88effc9fe814">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT idvencimiento as 'Id', codigoVencimiento as 'Codigo', fechaIngreso as 'Fcha de Ingreso', fechaCaducidad as 'Fecha de Caducidad', fechaAlerta as 'Fecha de Alerta', producto_pdt_productoid as 'Producto Id', descripcion as 'DEscripcion' FROM todoagrobd.detallevencimiento;]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer"/>
+	<field name="Codigo" class="java.lang.Integer"/>
+	<field name="Fcha de Ingreso" class="java.sql.Date"/>
+	<field name="Fecha de Caducidad" class="java.sql.Date"/>
+	<field name="Fecha de Alerta" class="java.sql.Date"/>
+	<field name="Producto Id" class="java.lang.Integer"/>
+	<field name="DEscripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="136" y="0" width="297" height="46" forecolor="#336600" uuid="29a0b208-83e4-4aa4-8d4f-13f4f858e74d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="40"/>
+				</textElement>
+				<text><![CDATA[Vencimientos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="179" y="46" width="174" height="22" forecolor="#663300" uuid="bf9b3194-00cb-43d1-bb85-f35182500673"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Reporte de Vencimientos]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-17" y="-14" width="82" height="70" uuid="32b77d1e-561b-451e-8317-4b8668517b10"/>
+				<imageExpression><![CDATA["C:\\Users\\nombre\\Documents\\NetBeansProjects\\jhonBelmont86-todoagroejb-bcc704e66da1\\MiPaginaWeb\\src\\main\\webapp\\reportes\\WhatsApp Image 2021-09-23 at 10.33.35 AM.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="50b1e7b6-d6db-40aa-a3a7-39f13d378181"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="75ffcf20-5d74-4928-806b-e5b714e82fe8"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="84be48cf-adc1-46ec-bde6-e5ae4234bcb7"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="2fb7357d-1f1c-481b-8180-992a3a3ba4e7"/>
+				<text><![CDATA[Fcha de Ingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="e28bac05-9677-4311-9fdc-ce565d69490a"/>
+				<text><![CDATA[Fecha de Caducidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="02cbd1f9-bb2f-4195-aa37-bcc8fa8091f8"/>
+				<text><![CDATA[Fecha de Alerta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="4ae3b346-54bb-4dd0-a41a-5fe37d4bcae1"/>
+				<text><![CDATA[Producto Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="6cb65ff5-7450-4da3-88b9-c0dd8fda74e6"/>
+				<text><![CDATA[DEscripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="7120035b-8988-43ad-aaba-84587bdd1d22"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="cff9fcab-d18a-4070-8a3b-40e9b1867eb4"/>
+				<textFieldExpression><![CDATA[$F{Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="c766222f-cec7-4381-96ff-d20368265a5b"/>
+				<textFieldExpression><![CDATA[$F{Codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="020af70b-6124-4997-8da0-5d617fb37bf7"/>
+				<textFieldExpression><![CDATA[$F{Fcha de Ingreso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="19f72448-cf9e-4d41-8f2e-965743e3e6d9"/>
+				<textFieldExpression><![CDATA[$F{Fecha de Caducidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="ef5586c9-64f2-4af8-a9b3-c38b257aadd4"/>
+				<textFieldExpression><![CDATA[$F{Fecha de Alerta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="fb5b79f9-2301-46d0-83e1-4a6dc3d47133"/>
+				<textFieldExpression><![CDATA[$F{Producto Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="34acfa75-facd-481b-b53c-b8f7eeb35cb1"/>
+				<textFieldExpression><![CDATA[$F{DEscripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="3a7445bf-2878-4ece-9219-af6df54142dd"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="eca9b800-7594-4b0f-a93d-a0d22c254373"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="75d196d4-d82f-4afd-9f7e-8415fc298d9f"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="1da9f882-6165-45a7-9566-a654265871b1"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

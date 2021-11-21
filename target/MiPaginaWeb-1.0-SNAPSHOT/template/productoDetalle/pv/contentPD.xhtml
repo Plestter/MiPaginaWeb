@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+ <h:messages errorStyle="color: red" infoStyle="color: green" globalOnly="true" />
+    <section class="ftco-section">
+        <h:form>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-5 ftco-animate">
+                        <a href="#{request.contextPath}/img/principal/#{detalleProductoController.producto.pdtImagen}" class="image-popup"><img src="#{request.contextPath}/img/principal/#{detalleProductoController.producto.pdtImagen}" class="img-fluid" alt="Colorlib Template"/></a>
+                    </div>
+                    <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+                        <h3>#{detalleProductoController.producto.pdtNombre}</h3>
+                        <div class="rating d-flex">
+                            <p class="text-left mr-4">
+                                <a href="#" class="mr-2">5.0</a>
+                                <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                <a href="#"><span class="ion-ios-star-outline"></span></a>
+                            </p>
+                            <p class="text-left mr-4">
+                                <a href="#" class="mr-2" style="color: #000;">100 <span style="color: #bbb;">Rating</span></a>
+                            </p>
+                            <p class="text-left">
+                                <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
+                            </p>
+                        </div>
+                        <p class="price"><span>
+                                <h:outputText value="#{detalleProductoController.producto.pdtValorventa}">
+                                    <f:convertNumber type="currency" currencySymbol="$" />
+                                </h:outputText>
+                            </span></p>
+                        <p>#{detalleProductoController.producto.pdtDescripcion}
+                        </p>
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="form-group d-flex">
+                                    <div class="select-wrap">
+                                        <!--<div class="icon"><span class="ion-ios-arrow-down"></span></div>-->
+                                        <!--                                    <select name="" id="" class="form-control">
+                                                                                <option value="">Small</option>
+                                                                                <option value="">Medium</option>
+                                                                                <option value="">Large</option>
+                                                                                <option value="">Extra Large</option>
+                                                                            </select>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="input-group col-md-6 d-flex mb-3">
+                                <span class="input-group-btn mr-2">
+                                    <button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
+                                        <i class="ion-ios-remove"></i>
+                                    </button>
+                                </span>
+
+                            <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="5"/>
+                                <span class="input-group-btn ml-2">
+                                    <button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
+                                        <i class="ion-ios-add"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12">
+                                <p style="color: #000;">#{detalleProductoController.producto.pdtTotal} unidades disponible</p>
+                            </div>
+                        </div>
+
+
+                        <p><h:commandLink  class="btn btn-black py-3 px-5" action="#{detalleProductoController.addToCar(detalleProductoController.producto)}" title="add">Agregar al carro </h:commandLink></p>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </section>
+
+</html>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab2b256d-791d-4600-b609-2e3c63425123">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT cat_categoriaid as 'Id', cat_nombre as 'Nombre de Categoria',cat_descripcion as 'Descripcion' FROM todoagrobd.categoria;]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer"/>
+	<field name="Nombre de Categoria" class="java.lang.String"/>
+	<field name="Descripcion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="123" y="0" width="336" height="46" forecolor="#006600" uuid="7f6e90d4-5f55-42ae-93c7-abda9d64b841"/>
+				<textElement verticalAlignment="Middle">
+					<font size="40"/>
+				</textElement>
+				<text><![CDATA[SystemAgroWeb]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="197" y="46" width="174" height="22" forecolor="#663300" uuid="66da88d2-82f2-4be6-94f7-5ff96f6d980f"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Reporte de categorias]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-19" y="-13" width="96" height="83" uuid="6bb5966c-a4b8-4b9f-aba3-704970a0f4c6"/>
+				<imageExpression><![CDATA["C:\\Users\\nombre\\Documents\\NetBeansProjects\\jhonBelmont86-todoagroejb-bcc704e66da1\\MiPaginaWeb\\src\\main\\webapp\\reportes\\WhatsApp Image 2021-09-23 at 10.33.35 AM.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="33f61809-6961-43cf-959b-60e86d92f96e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="185" height="15" uuid="1ee5f5c6-feda-4ffe-8454-ad2e2f13b2b6"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="185" y="19" width="185" height="15" uuid="9d4aaa92-9f02-4f6d-971e-bc10ede1872d"/>
+				<text><![CDATA[Nombre de Categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="370" y="19" width="185" height="15" uuid="521721f5-2b46-4fce-b0fd-2f042a7c42ce"/>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="61d72b29-08d3-47cd-9c14-8a6c8bd70f0f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="185" height="15" uuid="7677180a-73c8-4037-b537-d0acfc2368dc"/>
+				<textFieldExpression><![CDATA[$F{Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="185" y="0" width="185" height="15" uuid="6407f715-9fd9-410a-b99f-6e08a9494cfa"/>
+				<textFieldExpression><![CDATA[$F{Nombre de Categoria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="370" y="0" width="185" height="15" uuid="31bf7613-0a2e-4c3e-bc50-a71c9052998f"/>
+				<textFieldExpression><![CDATA[$F{Descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="b05c4a2c-03d8-4bca-97b5-0069b1a48e38"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="d84daf7a-8e21-44b2-9fc8-5f74a5d5e7c3"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="0b3b7dc5-da3a-436f-a91d-dc12831bdcd9"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="549d55e9-ad77-40ec-a210-0257564c932a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

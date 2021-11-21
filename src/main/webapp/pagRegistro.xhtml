@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"></link>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    </h:head>
+    <h:body>
+   <div class="container-fluid">
+    <section class="container">
+		<div class="container-page">	
+		<h:form id="form1">			
+			<div class="col-md-6">
+				<h3 class="dark-grey">Registrarme</h3>
+				<p:messages id="msg1" showDetail="true" closable="true" />
+					<div class="form-group col-lg-12">
+						<label>Nombre de Usuario</label>
+						<h:inputText value="#{usuController.nombre}"
+										requiredMessage="Se requiere un correo valido !!"
+										required="true" class="form-control" />	                                        
+					</div>
+					
+					<div class="form-group col-lg-6">
+						<label>Contraseña</label>
+						<h:inputSecret value="#{usuController.claveIn}"
+						requiredMessage="Se requiere una clave valido !!"
+						required="true" class="form-control" />
+					</div>
+					
+					<div class="form-group col-lg-6">
+						<label>Repita su Contraseña</label>
+						<input type="password" name="" class="form-control" id="" value=""></input>
+					</div>
+									
+					<div class="form-group col-lg-6">
+						<label>Correo Electronico</label>
+						<h:inputText value="#{usuController.correoIn}"
+										requiredMessage="Se requiere un correo valido !!"
+										required="true" class="form-control" />	
+					</div>
+					
+					<div class="form-group col-lg-6">
+						<label>Repita el Correo Electronico</label>
+						<input type="" name="" class="form-control" id="" value=""></input>
+					</div>			
+					
+					<div class="col-sm-6">
+						<input type="checkbox" class="checkbox" />Suscribirse a Nuestro Boletin de Noticias
+					</div>
+	
+					<div class="col-sm-6">
+						<input type="checkbox" class="checkbox" />Recibir Notificaiones por Email
+					</div>	
+				
+			</div>
+		
+			<div class="col-md-6">
+				<h3 class="dark-grey">System AgroWeb</h3>
+				<p>
+					By clicking on "Register" you agree to The Company's' Terms and Conditions
+				</p>
+				<p>
+					While rare, prices are subject to change based on exchange rate fluctuations - 
+					should such a fluctuation happen, we may request an additional payment. You have the option to request a full refund or to pay the new price. (Paragraph 13.5.8)
+				</p>
+				<p>
+					Should there be an error in the description or pricing of a product, we will provide you with a full refund (Paragraph 13.5.6)
+				</p>
+				<p>
+					Acceptance of an order by us is dependent on our suppliers ability to provide the product. (Paragraph 13.5.6)
+				</p>
+				<h:commandButton class="btn btn-primary"
+								value="Registrarme"
+								actionListener="#{usuController.registrarUsuario()}" style="margin: 15px;"/>	
+                                <h:link class="btn btn-primary"
+								value="Acceder"
+                                                                outcome="pagLogin.xhtml" style="margin: 15px; background: #31B617; border: none;"/>	
+			</div>
+			</h:form>
+		</div>
+	</section>
+</div>
+    
+</h:body>
+</html>
